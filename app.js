@@ -2,11 +2,11 @@ const express = require("express");
 const budgets = require("./controllers/budgetsController");
 
 const app = express();
-// const cors = require("cors")
-// app.use(cors())
+const cors = require("cors")
+app.use(cors())
 
-// app.use(express.json());
-// app.use("/budgets", budgets);
+app.use(express.json());
+app.use("/budgets", budgets);
 
 const coolest = "Alex";
 
