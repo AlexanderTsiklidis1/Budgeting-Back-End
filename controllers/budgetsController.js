@@ -24,6 +24,15 @@ budgets.post("/", (req, res) => {
     res.status(200).json({status:"OK", payload: budgetsData[budgetsData.length -1]})
 })
 
+budgets.delete("/:arrayIndex", (req,res) => {
+    const { arrayIndex } = req.params
+    if (budgetsData[arrayIndex]){
+        const deletedBudget = budgetsData.splice(arrayIndex, 1)
+        res.status(200).json(deletedBudget[0])
+    }else{
+        res.status(404).json({errror: "Could not locate budget to be deleted!"})
+    }  
+})
 
 
 
