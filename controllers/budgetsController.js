@@ -20,7 +20,11 @@ budgets.get("/:index", (req,res) => {
 budgets.post("/", (req, res) => {
     console.log("post route");
     console.log(req.body, "this is the req body sent from user")
+    budgetsData.push(req.body);
+    res.status(200).json({status:"OK", payload: budgetsData[budgetsData.length -1]})
 })
+
+
 
 
 
