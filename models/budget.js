@@ -44,7 +44,7 @@ module.exports = [
         item_name: "Rent",
         amount: - 1500.00,
         date: "2023/09/01",
-        from: "",
+        from: "Residential Costs",
         category : "Residence",
     },
     {
@@ -52,7 +52,7 @@ module.exports = [
         item_name: "Mall Shopping",
         amount: - 800.00,
         date: "2023/09/03",
-        from: "",
+        from: "Self",
         category : "Entertainment",
     },
     {
